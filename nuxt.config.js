@@ -28,6 +28,18 @@ export default {
         rel: 'stylesheet',
         href: '/js/bootstrap.js'
       },
+      {
+        rel: 'stylesheet',
+        href: '/js/bootstrap2.js'
+      },
+      {
+        rel: 'stylesheet',
+        href: '/css/vuetify.css'
+      },
+      {
+        rel: 'stylesheet',
+        href: '/js/vuetify.js'
+      },
     ]
   },
 
@@ -44,6 +56,9 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+
+    '@nuxtjs/vuetify',
+
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
