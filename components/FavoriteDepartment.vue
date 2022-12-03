@@ -13,7 +13,7 @@
 
         <div class="col">
 
-            <button class="me-4">
+            <button class="ms-4 me-4">
                 <img width="120"
                     src="https://i5.walmartimages.com/dfw/4ff9c6c9-c2cd/k2-_d8aac3aa-e920-427a-b965-49bfce1fed14.v1.jpg">
                 <p class="text-center">Electronics</p>
@@ -48,7 +48,7 @@
                     src=" https://i5.walmartimages.com/dfw/4ff9c6c9-6943/k2-_d355016e-d3da-4efb-a472-a924d92cb4c1.v1.jpg">
                 <p class="text-center">Movies & TV Shows</p>
             </button>
-            <button class="me-3">
+            <button class="">
                 <img width="120"
                     src="https://i5.walmartimages.com/dfw/4ff9c6c9-4d21/k2-_1e29ce02-aa57-4b89-b72a-f4495acd3527.v1.jpg">
                 <p class="text-center">Arts, Crafts & Sewing</p>

@@ -1,6 +1,6 @@
 <template>
-    <div class="row">
-        <h5>Everyday savings</h5>
+    <div class="row mt-4">
+        <h5>{{header}}</h5>
         <template>
           <v-sheet elevation="8">
             <v-slide-group  class="pa-4 mt-2" mandatory show-arrows>
@@ -45,3 +45,13 @@
 
       </div>
 </template>
+
+
+<script>
+export default {
+  
+
+  props:["header"]
+
+}
+</script>

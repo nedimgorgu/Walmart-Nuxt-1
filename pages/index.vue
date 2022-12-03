@@ -36,7 +36,7 @@
 
       <WalmartPlus />
 
-      <ProductSlider />
+      <ProductSlider header="Everyday savings" />
 
 
       <TravelReady />
@@ -45,7 +45,17 @@
 
       <FavoriteDepartment />
 
-      
+      <WalmartCreditCard />
+
+      <ProductSlider header="Build your cart" />
+
+      <ProductSlider header="Popular in home organization" />
+
+      <SeasonCard header="In season" />
+
+      <ProductSlider header="Popular in household appliances & accessories" />
+
+      <SeasonCard header="Brand new for you" />
 
     </div>
 
