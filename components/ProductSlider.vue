@@ -20,7 +20,7 @@
                         <div>Small plates, salads & sandwiches </div>
                           <v-divider class="mx-4"></v-divider>
                           <v-row align="center" class="mx-0">
-                          <v-rating :value="2.5" color="blue" dense half-increments readonly size="14"></v-rating>
+                          <v-rating :value=null color="blue" dense half-increments readonly size="14"></v-rating>
                           <v-chip class="w-75 mt-1 bg-primary text-light"> 3 days shipping</v-chip>
                           
                         </v-row>
@@ -49,9 +49,14 @@
 
 <script>
 export default {
-  
 
-  props:["header"]
+  data() {
+    return {
+      
+    }
+  },
+
+  props:["header","data"]
 
 }
 </script>
