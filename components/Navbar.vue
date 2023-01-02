@@ -62,7 +62,7 @@
 
 
 
-                    <button class="btn btn-sm btn-primary">
+                    <button v-if="checkLoginSituation" class="btn btn-sm btn-primary">
 
                         <div class="row">
 
@@ -81,7 +81,7 @@
 
                     <v-divider vertical></v-divider>
 
-                    <button class="btn btn-sm btn-primary">
+                    <button v-if="!checkLoginSituation" class="btn btn-sm btn-primary">
                         <router-link class="text-light text-decoration-none" :to="{ path: '/login' }">
 
                             <div class="row">
@@ -101,24 +101,24 @@
                     </button>
 
                     <v-divider vertical></v-divider>
+                    <routerLink :to="{ path: '/basket' }">
+                        <button v-if="checkLoginSituation" class="btn btn-sm btn-primary">
 
-                    <button class="btn btn-sm btn-primary">
+                            <div class="row">
 
-                        <div class="row">
+                                <div class="col-2 mt-2">
+                                    <img width="20" src="@/static/photos/basket.png">
+                                    <p>$0.00</p>
+                                </div>
 
-                            <div class="col-2 mt-2">
-                                <img width="20" src="@/static/photos/basket.png">
-                                <p>$0.00</p>
+
+
+
+
                             </div>
 
-
-
-
-
-                        </div>
-
-                    </button>
-
+                        </button>
+                    </routerLink>
 
 
                 </v-toolbar-items>
@@ -139,9 +139,17 @@
 </template>
 
 <script>
+
+import { mapGetters } from "vuex"
+
 export default {
 
 
+    computed: {
+
+        ...mapGetters(['checkLoginSituation'])
+
+    }
 
 
 }

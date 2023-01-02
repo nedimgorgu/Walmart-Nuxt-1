@@ -78,6 +78,7 @@
 
 <script>
 
+import {mapSetters} from "vuex"
 
 export default {
 
@@ -101,6 +102,9 @@ export default {
                 ...userData
             }
 
+            this.$store.commit('setUser',user)
+            this.$store.commit('setLogin',true)
+
             if (user.email == null || user.password == null) {
 
                 this.alert = true
@@ -114,7 +118,7 @@ export default {
 
 
             else {
-                this.$router.push({ path: '/' })
+                 this.$router.push({ path: '/' })
             }
 
 
@@ -122,12 +126,7 @@ export default {
 
 
     },
-    computed: {
 
-
-
-
-    }
 
 
 }
