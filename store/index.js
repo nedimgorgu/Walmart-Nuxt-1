@@ -1,7 +1,4 @@
 
-
-
-
 export const state = () => ({
 
     user: {
@@ -11,7 +8,8 @@ export const state = () => ({
 
     isLogin: false,
 
-    selectedProduct: null
+    selectedProduct: null,
+    totalPrice:0
 
 
 
@@ -29,15 +27,16 @@ export const getters = {
 
     getSelectedProduct(state){
       return state.selectedProduct
+    },
+    getTotalPrice(state){
+      return state.totalPrice
     }
-
 
 }
 
 export const mutations = {
 
     setUser(state, user) {
-
         state.user = user
     },
 
@@ -46,15 +45,11 @@ export const mutations = {
     },
 
     setSelectedProduct(state,item){
-
       state.selectedProduct = item
-
+    },
+    setTotalPrice(state,price){
+      state.totalPrice = price
     }
 
 }
-
-
-
-
-
 

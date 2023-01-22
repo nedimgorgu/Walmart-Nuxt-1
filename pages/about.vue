@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="deneme">
     <Navbar />
     <div class="container mt-5 mb-5">
       <div class="row d-flex justify-content-center">
@@ -57,7 +57,7 @@
 
 <script>
 
-import { collection, addDoc } from "firebase/firestore";
+import { collection, addDoc,doc, updateDoc, arrayUnion } from "firebase/firestore";
 import { db } from "~/firebase";
 import { mapGetters } from "vuex"
 
@@ -83,7 +83,13 @@ export default {
   methods: {
     async addToBasket(item) {
 
-      // const docRef = await addDoc(collection(db, "products"), item)
+      const targetDB = doc(db, "users", this.getUser.email);
+
+
+      await updateDoc(targetDB, {
+        basket: arrayUnion(item)
+      });
+
 
 
 
@@ -94,9 +100,12 @@ export default {
   },
   computed: {
 
-    ...mapGetters(['checkLoginSituation', 'getSelectedProduct'])
+    ...mapGetters(['checkLoginSituation', 'getSelectedProduct', 'getUser'])
 
   }
 
 }
 </script>
+
+
+

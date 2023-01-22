@@ -2,7 +2,7 @@
   <div>
 
     <header>
-      <v-toolbar style="height: 120px;" class="pt-4 fixed-top" color="bg-primary" dark>
+      <v-toolbar style="height: 120px;" class="pt-4 fixed-top" color="bg-primary" dark  fixed>
         <v-toolbar-title>
 
 
@@ -107,9 +107,9 @@
 
               <div class="row">
 
-                <div class="col-2 mt-2">
+                <div class="col mt-2">
                   <img width="20" src="@/static/photos/basket.png">
-                  <p>$0.00</p>
+                  <p>$ {{this.getTotalPrice.toFixed(2)}} </p>
                 </div>
 
 
@@ -160,9 +160,10 @@ import { mapGetters } from "vuex"
 export default {
 
 
+
   computed: {
 
-    ...mapGetters(['checkLoginSituation'])
+    ...mapGetters(['checkLoginSituation','getTotalPrice'])
 
   },
   methods: {
@@ -171,6 +172,10 @@ export default {
       this.$store.commit('setLogin', false)
     }
   },
+
+
+
+
 
 
 }
