@@ -11,6 +11,8 @@ export const state = () => ({
 
     isLogin: false,
 
+    selectedProduct: null
+
 
 
 })
@@ -23,6 +25,10 @@ export const getters = {
 
     checkLoginSituation(state) {
         return state.isLogin
+    },
+
+    getSelectedProduct(state){
+      return state.selectedProduct
     }
 
 
@@ -37,6 +43,12 @@ export const mutations = {
 
     setLogin(state, situation) {
         state.isLogin = situation
+    },
+
+    setSelectedProduct(state,item){
+
+      state.selectedProduct = item
+
     }
 
 }
